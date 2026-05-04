@@ -1,0 +1,25 @@
+services:
+  opencv-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: opencv-lab:1.0
+
+    container_name: opencv-lab-container
+
+    working_dir: /workspace
+
+    volumes:
+      - ./app:/workspace/app
+      - ./data:/workspace/data
+      - ./outputs:/workspace/outputs
+      - ./notebooks:/workspace/notebooks
+
+    ports:
+      - "8888:8888"
+
+    stdin_open: true
+    tty: true
+
+    command: bash
