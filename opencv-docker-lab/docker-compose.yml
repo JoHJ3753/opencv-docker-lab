@@ -23,3 +23,5 @@ services:
     tty: true
 
     command: bash
+
+    test
