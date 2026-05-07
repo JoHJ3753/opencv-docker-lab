@@ -1,1 +1,1 @@
-# STUDY
+# opencv-docker-lab
